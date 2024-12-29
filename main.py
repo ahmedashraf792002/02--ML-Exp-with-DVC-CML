@@ -3,7 +3,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pickle as pk
+import joblib
 import os
 from PIL import Image
 # Libraries for Machine Learning
@@ -109,9 +109,8 @@ def train_and_evaluate_model(model, model_name, X_train, y_train, X_test, y_test
         f.write(f"{model_name} - Confusion Matrix:\n {cm} \n")
         f.write(f"{model_name} - Classification Report:\n {classification_report_str} \n")
         f.write('----'*10 + '\n')
-    os.makedirs(os.path.join(os.getcwd(), 'models'), exist_ok=True)
     # Save the model
-    pk.dump(model, open(os.path.join(os.getcwd(), 'models', f'{model_name}.pkl'), 'wb'))
+    joblib.dump(model, os.path.join(os.getcwd(), 'models', f'{model_name}.pkl'))
         
 parameters = {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
 parameters["class_weight"] = class_weight_dict

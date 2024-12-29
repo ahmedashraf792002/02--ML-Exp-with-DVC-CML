@@ -17,7 +17,7 @@ pip install dvc-gdrive  # for using gdrive
 git init
 git add .
 git commit -m "initial commit"
-git remote add origin https://github.com/ahmedashraf792002/MLflow-Projects.git
+git remote add origin https://github.com/ahmedashraf792002/02--ML-Exp-with-DVC-CML.git
 git push
 git status
 ```

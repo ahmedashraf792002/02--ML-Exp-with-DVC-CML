@@ -4,6 +4,6 @@ xgboost
 lightgbm
 matplotlib
 seaborn
-pickle
+joblib
 dvc
 dvc-gdrive
